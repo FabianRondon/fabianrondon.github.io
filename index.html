@@ -22,8 +22,36 @@
     #sobre-mi p { margin-bottom: 10px; text-align: justify; }
     .proyectos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
     .card { background: #f5f7fa; border-radius: 10px; padding: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
     .card h3 { color: #0a2342; margin-bottom: 10px; }
     .card p { margin-bottom: 8px; font-size: 0.95rem; }
+
+    /* ======== GALERÍA DE IMÁGENES ======== */
+    .gallery {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .gallery-container {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+    .gallery-container img {
+      width: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      30% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      63% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      96% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
     footer { background-color: #0a2342; color: #fff; text-align: center; padding: 30px 20px; }
     footer a { color: #a8c4ff; text-decoration: none; }
     footer a:hover { text-decoration: underline; }
@@ -59,12 +87,35 @@
     <div class="proyectos">
       <div class="card">
         <h3>Requisitos del Backend de Urban Grocers</h3>
+
+        <!-- Galería del proyecto Urban Grocers -->
+        <div class="gallery">
+          <div class="gallery-container">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Grocers+1" alt="Vista del proyecto Urban Grocers 1">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Grocers+2" alt="Vista del proyecto Urban Grocers 2">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Grocers+3" alt="Vista del proyecto Urban Grocers 3">
+          </div>
+          <p style="font-size:0.9rem; text-align:center; margin-top:10px; color:#555;">Flujo funcional del proyecto Urban Grocers</p>
+        </div>
+
         <p><strong>Contexto:</strong> Validación del consumo de un API para la creación, modificación, consulta y eliminación de productos, incluyendo la gestión del servicio de entrega con horarios y costos variables.</p>
         <p><strong>Análisis:</strong> Se diseñaron y ejecutaron casos de prueba funcionales utilizando POSTMAN, validando los distintos formatos de envío en JSON y SOAP. Se implementó la trazabilidad de bugs mediante JIRA, garantizando la identificación oportuna de errores y su corrección eficiente.</p>
         <p><strong>Conclusiones principales:</strong> El proyecto reforzó las buenas prácticas en el manejo de APIs y documentación de resultados, logrando una mayor precisión en las validaciones y reducción de incidentes en producción.</p>
       </div>
+
       <div class="card">
         <h3>Requisitos para Solicitar un Vehículo – Urban Routes</h3>
+
+        <!-- Galería del proyecto Urban Routes -->
+        <div class="gallery">
+          <div class="gallery-container">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Routes+1" alt="Vista del proyecto Urban Routes 1">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Routes+2" alt="Vista del proyecto Urban Routes 2">
+            <img src="https://via.placeholder.com/800x400?text=Urban+Routes+3" alt="Vista del proyecto Urban Routes 3">
+          </div>
+          <p style="font-size:0.9rem; text-align:center; margin-top:10px; color:#555;">Flujo funcional del proyecto Urban Routes</p>
+        </div>
+
         <p><strong>Contexto:</strong> Desarrollo y validación de un módulo que permitiera al usuario solicitar un vehículo, evaluando la disponibilidad, costo y tiempo del trayecto según el tipo de ruta y dirección.</p>
         <p><strong>Análisis:</strong> Se crearon y ejecutaron casos de prueba positivos y negativos para validar el comportamiento del sistema bajo diferentes escenarios. Se gestionó la documentación de defectos en JIRA, asegurando trazabilidad y colaboración entre los equipos de QA y desarrollo.</p>
         <p><strong>Conclusiones principales:</strong> El proyecto fortaleció la metodología de aseguramiento de calidad, promoviendo la automatización de pruebas y el mejor entendimiento del ciclo de vida del software.</p>
